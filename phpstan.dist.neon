@@ -1,0 +1,15 @@
+includes:
+	- phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+    level: max
+
+    tmpDir: build/phpstan
+
+    paths:
+        - src
+
+    ignoreErrors:
+        - identifier: classConstant.unused
+        - identifier: return.type
+          path: src/StatefulEnum.php
